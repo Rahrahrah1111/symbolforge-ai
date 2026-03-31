@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymbolForge™ by camadelaide</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="hero-bg"></div>
+    <div class="container">
+        <header>
+            <img src="assets/logo.webp" alt="SymbolForge by camadelaide" class="logo" />
+            <h1>SymbolForge™ by camadelaide</h1>
+            <p class="subtitle">The definitive v4.0 interpreter.</p>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <div class="panel">
+                    <h2>Vault Configuration</h2>
+                    <input type="text" id="vaultKey" value="ADELAIDE-CAM-001" placeholder="Enter VaultKey...">
+                </div>
+
+                <div class="workspace">
+                    <textarea id="interpreterInput" placeholder="Enter your SymbolForge glyphs here..."></textarea>
+                    <button id="interpretBtn">Interpret</button>
+                </div>
+                
+                <div class="stats">
+                    <h3>Token Savings</h3>
+                    <div id="savingsCounter" class="counter">93.7%</div>
+                </div>
+
+                <div class="output-panel">
+                    <h3>Output</h3>
+                    <div id="outputArea"></div>
+                </div>
+                
+                <div class="pro-panel">
+                    <h3>SymbolForge Pro</h3>
+                    <p>Unlock infinite expansions and premium VaultKeys.</p>
+                    <button id="checkoutBtn">Upgrade for $49/mo</button>
+                    <div id="stripe-error-message"></div>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+                <img src="assets/dashboard.webp" alt="Dashboard Screenshot" />
+            </div>
+        </main>
+        
+        <footer>
+            <p>OHHDAYUM. Built for the Adelaide night.</p>
+            <p><a href="https://camadelaide.github.io/symbolforge-ai">Live at camadelaide.github.io/symbolforge-ai</a></p>
+        </footer>
+    </div>
+    
+    <script src="symbols.json" type="application/json" id="symbolData"></script>
+    <script src="vault.js"></script>
+    <script src="app.js"></script>
+    <script src="stripe.js"></script>
+</body>
+</html>
